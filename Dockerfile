@@ -3,5 +3,7 @@ RUN apt-get update && \
     apt-get install -y gnat-8
 WORKDIR /app
 COPY . .
-RUN mkdir -p obj
+WORKDIR /app/Source
 RUN gnatmake -gnat95 -f advgame.adb spritemaker.adb
+RUN cp advgame ..
+WORKDIR /app

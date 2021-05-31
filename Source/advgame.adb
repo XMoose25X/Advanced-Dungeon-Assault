@@ -18,9 +18,8 @@ procedure advgame is
 	Destroyed: Integer := 0;
 	-- End Room Stuff
 	RoomID : Integer := -1;
-	GameDir : String := Current_Directory;
-	SpriteDir : String := GameDir & "/Sprites/";
-	EnemyPath : String := GameDir & "/Enemies/";
+	SpriteDir : String := "Sprites/";
+	EnemyPath : String := "Enemies/";
 	INVALID_INPUT : Exception;
 	input : Character := ASCII.ESC;
 	battleCommand : Integer := -1;
@@ -29,7 +28,7 @@ procedure advgame is
 	slotID : Integer;
 	level : integer := 1;
 	textBoxHeight : constant Positive := 8;
-	arrow : SpriteType := LoadSprite("arrow.sprite");
+	arrow : SpriteType := LoadSprite(SpriteDir & "arrow.sprite");
 	inBattle : Boolean := false;
 	inBackpack : Boolean := false;
 	target : Integer := 1;
@@ -342,7 +341,7 @@ procedure advgame is
 ---------------------------------------------------------------------------------------------------	
 	function titleScreen return character is
 		response : character := 'o';
-		titlePic : spriteType := LoadSprite("title.sprite");
+		titlePic : spriteType := LoadSprite(SpriteDir & "title.sprite");
 	begin
 		loop
 			ClearDisplay;

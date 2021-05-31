@@ -5,6 +5,8 @@ with inventory_list;		Use inventory_list;
 
 package body save_load_game is
 
+SaveDir : String := "Saves/";
+
 procedure newGame(	player : out player_Type;
 					dungeon : out integer ) is
 begin
@@ -17,23 +19,22 @@ end newGame;
 procedure saveGame(	player : in player_Type;
 					dungeon : in integer;
 					fileNum : in integer) is
-	
 	save : File_Type;
 	
 begin
 	
 	if fileNum = 1 then
 		
-		open(save, Out_File, "saveFile1.save");
+		open(save, Out_File, SaveDir & "saveFile1.save");
 		put(save, "saveFile1");
 		
 	elsif fileNum = 2 then
 		
-		open(save, Out_File, "saveFile2.save");
+		open(save, Out_File, SaveDir & "saveFile2.save");
 		put(save, "saveFile2");
 	elsif fileNum = 3 then
 		
-		open(save, Out_File, "saveFile3.save");
+		open(save, Out_File, SaveDir & "saveFile3.save");
 		put(save, "saveFile3");
 		
 	end if;
@@ -95,15 +96,15 @@ begin
 	
 	if fileNum = 1 then
 		
-		open(save, In_File, "saveFile1.save");
+		open(save, In_File, SaveDir & "saveFile1.save");
 		
 	elsif fileNum = 2 then
 		
-		open(save, In_File, "saveFile2.save");
+		open(save, In_File, SaveDir & "saveFile2.save");
 		
 	elsif fileNum = 3 then
 		
-		open(save, In_File, "saveFile3.save");
+		open(save, In_File, SaveDir & "saveFile3.save");
 		
 	end if;
 
