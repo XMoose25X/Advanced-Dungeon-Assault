@@ -1,0 +1,9 @@
+*.txt text eol=lf
+*.dat text eol=lf
+*.sprite text eol=lf
+*.info text eol=lf
+*.list text eol=lf
+*.ads text eol=lf
+*.adb text eol=lf
+# Ensure those won't be messed with
+*.png binary
