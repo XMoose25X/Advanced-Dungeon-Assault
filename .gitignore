@@ -1,5 +1,14 @@
 # Object file
+obj/
 *.o
-
 # Ada Library Information
 *.ali
+# Linux Executables
+advgame
+display
+game
+inventory_test
+player_test
+save_test
+spritemaker
+test

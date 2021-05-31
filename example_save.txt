@@ -1,0 +1,20 @@
+savefile1  
+-- character stats
+90 130 --current and total HP (100 + player level * 10)
+20 130 --current and total Mana (100 + player level * 10)
+18	--Attack  ((player level + weapon attack) * 3)
+24	--Magic ((player level + weapon magic)* 8)
+15	--Defense ((player level + armor defense) * 3)
+16	--Agility ((player level * 2) + 10)
+24 	--XP
+3	--Level
+02	--equipped weapon ID
+05	--equipped head armor ID
+00	--equipped chest armor ID
+00	--equipped hand armor ID
+00	--equipped leg armor ID
+00	--equipped feet armor ID
+
+--inventory
+02 11 11 11 05 09 14
+-- inventory ^ (when save is called, each item ID in inventory is recorded in order)
