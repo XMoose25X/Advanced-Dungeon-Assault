@@ -75,8 +75,8 @@ package display is
 	Char_BorderBL : constant Character := character'val(200);-- È		Bottom Left Corner
 	Char_BorderBR : constant Character := character'val(188);-- ¼		Bottom Right Corner
 
-	--screen width and height. These start at 0, so a width of 139 is actually 140 pixels wide
-	Screen_Width : Integer := 139;
+	--screen width and height. These start at 0, so a width of 149 is actually 150 pixels wide
+	Screen_Width : Integer := 149;
 	Screen_Height : Integer := 39;
 	
 	--this defines the screen;
