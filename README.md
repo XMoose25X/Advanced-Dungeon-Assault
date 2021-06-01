@@ -16,16 +16,23 @@ It was an early college project. Even though it is rough around the edges, we si
 * Worn out? Feel free to come back another time! ADA is capable of storing 3 different save files.
 ![Saving](./Assets/Saving.png)
 
-## Running using Docker
+## Development
+### Prerequisites
+* [Docker](https://www.docker.com/) if you wish to use the existing [Dockerfile](./Dockerfile).
+* [Gnat](https://www.adacore.com/download/more) if you will be executing locally.
+
+### Running using Docker
 1. Run `docker build -t ada:latest .` to build the docker image and compile the code.
 1. Run `docker run --rm -it ada:latest ./advgame` to enter the docker image and run the game.
 
-## Sprite Maker
+### Sprite Maker
 ![Sprite Editing](./Assets/Sprite-Editing.png)
 1. Run `docker build -t ada:latest .` to build the docker image and compile the code.
 1. Run `docker run --rm -it ada ./spritemaker` to enter the docker image and run the editor.
 
-## Distribute
-Run `mkdir -p dist && cp {sprites,items.dat,LICENSE,Enemies,Maps,advgame,Saves} dist -r && tar -czvf Advanced-Dungeon-Assault.tar.gz dist` to generate the release candidate.
+### Distribution
+#### Windows
+Run `mkdir dist & for %f in (Sprites,Enemies,Maps,Saves) do xcopy %f dist\%f\ /e /y & for %f in (items.dat,LICENSE,advgame.exe) do xcopy %f dist\ /y & tar.exe -a -c -f Advanced-Dungeon-Assault.zip dist` to generate the Windows release canidate.
 
-
+#### Linux
+Run `mkdir -p dist && cp {sprites,items.dat,LICENSE,Enemies,Maps,advgame,Saves} dist -r && tar -czvf Advanced-Dungeon-Assault.tar.gz dist` to generate the Linux release candidate.

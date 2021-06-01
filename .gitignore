@@ -11,6 +11,9 @@ player_test
 save_test
 spritemaker
 test
+# Windows Executables
+*.exe
 # Distribution
 dist/
 *.tar.gz
+*.zip
