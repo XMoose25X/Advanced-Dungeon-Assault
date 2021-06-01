@@ -3,6 +3,7 @@ with Ada.Text_IO;			Use Ada.Text_IO;
 with inventory_list;		Use inventory_list;
 with player;				Use player;
 with save_load_game;		Use save_load_game;
+with stats;                 Use stats;
 
 Procedure player_test is
 
@@ -105,7 +106,7 @@ begin
 		
 		put("*Inventory*");
 		new_line;
-		display(bob.backpack);
+		DisplayList(bob.backpack);
 	
 		new_line;
 		put("Use/Equip item: 1        Unequip item: 2");
@@ -139,7 +140,7 @@ begin
 		elsif response = 3 then
 			put("Type in the amount of damage you want to inflict: ");
 			get(response2);
-			hurt(response2, bob);
+			calculateDamage(bob.stats, bob.stats, response2, true);
 			response2 := -1;
 		elsif response = 4 then
 			put("Type in the amount of magic you want to use: ");
@@ -149,7 +150,7 @@ begin
 		elsif response = 5 then
 			put("Type in the earned XP: ");
 			get(response2);
-			addXP(response2, bob);
+			addXP(response2, bob.stats);
 			response2 := -1;
 		elsif response = 6 then
 			put("New Character? (Y/N): ");

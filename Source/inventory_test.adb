@@ -84,7 +84,7 @@ begin
 	
 		elsif response = 4 then
 		
-			display(backpack);
+			DisplayList(backpack);
 	
 		elsif response = 5 then
 		

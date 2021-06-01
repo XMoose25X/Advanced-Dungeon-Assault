@@ -52,6 +52,10 @@ package display is
 		char : Character;
 		color : colorType;
 	end record;
+
+	--tests if 2 pixels are the same
+	function "=" (L, R : pixelType) return Boolean;
+	
 	--an imageBox is a 2-dimensional array of pixelType
 	Type ImageBox is array(0..127,0..63) of PixelType;
 	
@@ -81,9 +85,6 @@ package display is
 	
 	--this defines the screen;
 	Screen : array(0..Screen_Width,0..Screen_Height) of PixelType;
-	
-	--tests if 2 pixels are the same
-	function "=" (L, R : pixelType) return Boolean;
 	
 	--sets a pixel on the screen with the piven character and color(optional)
 	procedure setPixel(X,Y : Integer; char : character; color : colorType := colorDefault);

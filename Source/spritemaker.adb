@@ -4,8 +4,6 @@ use Ada.Text_IO, Ada.Integer_Text_IO, display;
 procedure spritemaker is
 
 	procedure showFile(Filename : String) is
-		L : Natural;
-		line : String(1..250);
 		File : File_Type;
 	begin
 		Open(File, In_File, Filename);
