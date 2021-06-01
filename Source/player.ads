@@ -3,7 +3,7 @@ with stats;					Use stats;
 
 package player is
 
-	Type player_type is record
+	Type Player_Type is record
 		weapon : inventoryItem;
 		helmet : inventoryItem;
 		chestArmor : inventoryItem;
