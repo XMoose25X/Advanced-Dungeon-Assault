@@ -6,9 +6,11 @@ obj/
 # Linux Executables
 advgame
 display
-game
 inventory_test
 player_test
 save_test
 spritemaker
 test
+# Distribution
+dist/
+*.tar.gz

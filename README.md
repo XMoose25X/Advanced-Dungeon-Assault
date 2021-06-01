@@ -25,4 +25,7 @@ It was an early college project. Even though it is rough around the edges, we si
 1. Run `docker build -t ada:latest .` to build the docker image and compile the code.
 1. Run `docker run --rm -it ada ./spritemaker` to enter the docker image and run the editor.
 
+## Distribute
+Run `mkdir -p dist && cp {sprites,items.dat,LICENSE,Enemies,Maps,advgame,Saves} dist -r && tar -czvf Advanced-Dungeon-Assault.tar.gz dist` to generate the release candidate.
+
 
